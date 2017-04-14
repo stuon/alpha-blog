@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
         @article.content_type = 'blog'
         @article.difficulty_level = 0
         @article.word_count = 100
+        @article.user = User.first
         
         if @article.save
             flash[:success] = "Article was successfully created"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410110220) do
+ActiveRecord::Schema.define(version: 20170414001128) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(version: 20170410110220) do
     t.integer  "difficulty_level"
     t.integer  "word_count"
     t.text     "language_code"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
